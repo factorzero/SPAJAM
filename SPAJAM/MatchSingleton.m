@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 
 @implementation MatchSingleton
-@synthesize teamOne, teamTwo, teamOneNames, teamTwoNames;
+@synthesize teamOne, teamTwo, teamOneNames, teamTwoNames, matchForConfirmation;
 
 typedef NS_ENUM(int, MatchStatus) {
     
@@ -38,6 +38,7 @@ typedef NS_ENUM(int, MatchStatus) {
         teamTwo = [[NSArray alloc] init];
         teamOneNames = [[NSArray alloc] init];
         teamTwoNames = [[NSArray alloc] init];
+        matchForConfirmation = [PFObject alloc];
         
     }
     return self;
@@ -57,6 +58,7 @@ typedef NS_ENUM(int, MatchStatus) {
 {
  
     teamOne = team;
+    teamOneNames = names;
     
 }
 
@@ -64,7 +66,15 @@ typedef NS_ENUM(int, MatchStatus) {
 {
     
     teamTwo = team;
+    teamTwoNames = names;
     
+}
+
+- (void)readyForAction
+{
+    [[NSNotificationCenter defaultCenter]
+     postNotificationName:@"data ready"
+     object:self];
 }
 
 
@@ -79,7 +89,9 @@ typedef NS_ENUM(int, MatchStatus) {
     NSNumber *status = @0;
     newMatch[@"status"] = status;
     newMatch[@"teamOne"] = teamOne;
+    newMatch[@"teamOneNames"] = teamOneNames;
     newMatch[@"teamTwo"] = teamTwo;
+    newMatch[@"teamTwoNames"] = teamTwoNames;
     
     
     // save the match
@@ -90,6 +102,18 @@ typedef NS_ENUM(int, MatchStatus) {
     }];
 
     
+}
+
+- (void)confirmMatch
+{
+    NSNumber *status = @1; // confirmed
+    matchForConfirmation[@"status"] = status;
+    // save the match
+    [matchForConfirmation saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+        
+        // save and ask for confirmation through push
+        NSLog(@"confirmed the match!");
+    }];
 }
 
 

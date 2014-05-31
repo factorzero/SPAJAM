@@ -66,6 +66,65 @@
             </objects>
             <point key="canvasLocation" x="1048" y="-517"/>
         </scene>
+        <!--Match Confirm View Controller-->
+        <scene sceneID="kw6-4w-qvk">
+            <objects>
+                <viewController id="6bV-Pf-B5P" customClass="MatchConfirmViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mpf-5D-nV1"/>
+                        <viewControllerLayoutGuide type="bottom" id="XMN-8D-Zb6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5As-MT-icB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="キャラ_ネイマール風.png" translatesAutoresizingMaskIntoConstraints="NO" id="peI-SM-gVX">
+                                <rect key="frame" x="20" y="67" width="120" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="キャラ_メッシ風.png" translatesAutoresizingMaskIntoConstraints="NO" id="80N-KH-s11">
+                                <rect key="frame" x="180" y="67" width="120" height="200"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbB-UM-pyy">
+                                <rect key="frame" x="20" y="470" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="confirm">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="confirmMatch:" destination="6bV-Pf-B5P" eventType="touchUpInside" id="dxm-QZ-Lz0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BrY-bG-3Tb">
+                                <rect key="frame" x="20" y="292" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yh1-bh-83Y">
+                                <rect key="frame" x="180" y="292" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ic8-2c-Br2"/>
+                    <connections>
+                        <outlet property="captainOneImage" destination="peI-SM-gVX" id="Rrs-6k-29o"/>
+                        <outlet property="captainOneName" destination="BrY-bG-3Tb" id="zgF-fm-YB4"/>
+                        <outlet property="captainTwoImage" destination="80N-KH-s11" id="Pvg-nP-sfi"/>
+                        <outlet property="captainTwoName" destination="yh1-bh-83Y" id="rxW-23-d5W"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i3Y-gm-A2L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="568" y="-1279"/>
+        </scene>
         <!--Match Profile View Controller-->
         <scene sceneID="QLQ-wW-nMT">
             <objects>
@@ -79,13 +138,23 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cFT-up-ac5">
-                                <rect key="frame" x="124" y="431" width="46" height="30"/>
+                                <rect key="frame" x="29" y="419" width="120" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="new match">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="rAa-eH-LqR" kind="push" id="dH3-B0-XZk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k39-ov-YIC">
+                                <rect key="frame" x="175" y="419" width="120" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="confirm match">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6bV-Pf-B5P" kind="push" id="Nap-Jt-q3X"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="キャラ_ネイマール風.png" translatesAutoresizingMaskIntoConstraints="NO" id="lNS-zG-gzA">
@@ -166,7 +235,9 @@
                     <navigationItem key="navigationItem" id="vBA-FE-fI0"/>
                     <connections>
                         <outlet property="captainOneImage" destination="a6X-UB-kp4" id="jsz-iu-Sjv"/>
+                        <outlet property="captainOneName" destination="xjY-Ji-Yle" id="86u-xr-Cxz"/>
                         <outlet property="captainTwoImage" destination="qiY-hq-n6p" id="aSN-Vq-fTC"/>
+                        <outlet property="captainTwoName" destination="gQk-hA-3W2" id="B0n-0a-pYz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1iQ-wi-VH2" userLabel="First Responder" sceneMemberID="firstResponder"/>

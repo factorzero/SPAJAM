@@ -46,6 +46,7 @@
 		04DCD84A1939E5E000F38759 /* キャラ_ネイマール風.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DCD8481939E5E000F38759 /* キャラ_ネイマール風.png */; };
 		04DCD84B1939E5E000F38759 /* キャラ_メッシ風.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DCD8491939E5E000F38759 /* キャラ_メッシ風.png */; };
 		04DCD84E193A171000F38759 /* MatchSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD84D193A171000F38759 /* MatchSingleton.m */; };
+		04E1039F193A7BAB008C5490 /* MatchConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1039E193A7BAB008C5490 /* MatchConfirmViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,8 @@
 		04DCD8491939E5E000F38759 /* キャラ_メッシ風.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "キャラ_メッシ風.png"; sourceTree = "<group>"; };
 		04DCD84C193A171000F38759 /* MatchSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchSingleton.h; sourceTree = "<group>"; };
 		04DCD84D193A171000F38759 /* MatchSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchSingleton.m; sourceTree = "<group>"; };
+		04E1039D193A7BAB008C5490 /* MatchConfirmViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchConfirmViewController.h; sourceTree = "<group>"; };
+		04E1039E193A7BAB008C5490 /* MatchConfirmViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchConfirmViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +207,8 @@
 				04DCD8431939D1C800F38759 /* MatchFriendViewController.m */,
 				0408DDB3193A3C6D00E16597 /* MatchRegisterViewController.h */,
 				0408DDB4193A3C6D00E16597 /* MatchRegisterViewController.m */,
+				04E1039D193A7BAB008C5490 /* MatchConfirmViewController.h */,
+				04E1039E193A7BAB008C5490 /* MatchConfirmViewController.m */,
 				042D0DAB1939AFBE004AFEA3 /* Images.xcassets */,
 				04DCD8471939E5E000F38759 /* images */,
 				042D0D9A1939AFBE004AFEA3 /* Supporting Files */,
@@ -368,6 +373,7 @@
 				042D0DE51939BCB0004AFEA3 /* MatchProfileViewController.m in Sources */,
 				0408DDB5193A3C6D00E16597 /* MatchRegisterViewController.m in Sources */,
 				0423DC34193A375400263FB9 /* MatchTypeViewController.m in Sources */,
+				04E1039F193A7BAB008C5490 /* MatchConfirmViewController.m in Sources */,
 				042D0DAA1939AFBE004AFEA3 /* ViewController.m in Sources */,
 				042D0DA41939AFBE004AFEA3 /* AppDelegate.m in Sources */,
 				04DCD8451939D1C800F38759 /* MatchFriendViewController.m in Sources */,

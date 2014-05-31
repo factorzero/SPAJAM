@@ -87,20 +87,16 @@
         if (!error) {
             // The find succeeded.
             NSLog(@"Successfully retrieved %d scores.", objects.count);
-            // Do something with the found objects
-            for (PFObject *object in objects) {
-                NSLog(@"%@", object.objectId);
-            }
-            
+
             // set self and opponents for match
             MatchSingleton *sharedManager = [MatchSingleton sharedManager];
-            NSArray *teamOne = [NSArray arrayWithObjects:[PFUser currentUser], nil];
+            NSArray *teamOne = [[NSArray alloc] initWithObjects:[PFUser currentUser], nil];
             NSArray *teamTwo = objects;
             NSArray *names1 = [NSArray arrayWithObjects:[PFUser currentUser].username, nil];
             NSArray *names2 = [NSArray arrayWithObjects:[self.friendArray objectAtIndex:indexPath.row], nil];
             [sharedManager setTeamOneWithArray:teamOne andNames:names1];
             [sharedManager setTeamTwoWithArray:teamTwo andNames:names2];
-            
+            [sharedManager readyForAction];
             
             
         } else {

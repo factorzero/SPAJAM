@@ -1,5 +1,5 @@
 //
-//  MatchRegisterViewController.h
+//  MatchConfirmViewController.h
 //  SPAJAM
 //
 //  Created by Corey Lee on 6/1/14.
@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface MatchRegisterViewController : UIViewController
+@interface MatchConfirmViewController : UIViewController
 
 @property (nonatomic, weak) IBOutlet UIImageView *captainOneImage;
 @property (nonatomic, weak) IBOutlet UIImageView *captainTwoImage;
 @property (nonatomic, weak) IBOutlet UILabel *captainOneName;
 @property (nonatomic, weak) IBOutlet UILabel *captainTwoName;
-
+@property (nonatomic, strong) PFObject *matchObject;
 @end

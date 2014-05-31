@@ -8,6 +8,7 @@
 
 #import "MatchRegisterViewController.h"
 #import "MatchSingleton.h"
+#import <Parse/Parse.h>
 
 @interface MatchRegisterViewController ()
 
@@ -28,6 +29,19 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(updateUI)
+                                                 name:@"data ready"
+                                               object:nil];
+    
+}
+
+- (void)updateUI
+{
+    MatchSingleton *sharedManager = [MatchSingleton sharedManager];
+    // show names
+    [self.captainOneName setText:[sharedManager.teamOneNames objectAtIndex:0]];
+    [self.captainTwoName setText:[sharedManager.teamTwoNames objectAtIndex:0]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,8 +58,10 @@
     MatchSingleton *sharedManager = [MatchSingleton sharedManager];
     // save match
     [sharedManager createMatch];
+
     
 }
+
 
 
 /*
