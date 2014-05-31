@@ -32,7 +32,6 @@
     //[self.navigationController setNavigationBarHidden:YES];
     
     
-    //[self getSportsForUser];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -52,7 +51,7 @@
             NSLog(@"User signed up and logged in through Facebook!");
         } else {
             NSLog(@"User logged in through Facebook!");
-            
+            [self getSportsForUser];
             
         }
     }];
@@ -78,6 +77,11 @@
                 
                 NSString *sports = [jsonDict objectForKey:@"sports"];
                 NSLog(@"Sports: %@", sports);
+                
+                // update username
+                NSString *name = [jsonDict objectForKey:@"last_name"];
+                [[PFUser currentUser] setUsername:name];
+                [[PFUser currentUser] saveEventually];
                 
             }
             

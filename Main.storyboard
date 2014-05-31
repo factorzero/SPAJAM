@@ -119,7 +119,7 @@
         <!--Match Register View Controller-->
         <scene sceneID="NTL-v9-VBI">
             <objects>
-                <viewController id="cVg-a8-OtD" customClass="MatchRegisterViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="register" id="cVg-a8-OtD" customClass="MatchRegisterViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8kA-Zv-Umw"/>
                         <viewControllerLayoutGuide type="bottom" id="eAb-rt-nAA"/>
@@ -146,6 +146,20 @@
                                     <action selector="confirmMatch:" destination="cVg-a8-OtD" eventType="touchUpInside" id="bvY-k7-xHZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xjY-Ji-Yle">
+                                <rect key="frame" x="20" y="340" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQk-hA-3W2">
+                                <rect key="frame" x="180" y="340" width="120" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -175,6 +189,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="287" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="cVg-a8-OtD" kind="push" id="beh-Q8-bgc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

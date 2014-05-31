@@ -10,7 +10,7 @@
 #import <Parse/Parse.h>
 
 @implementation MatchSingleton
-@synthesize teamOne, teamTwo;
+@synthesize teamOne, teamTwo, teamOneNames, teamTwoNames;
 
 typedef NS_ENUM(int, MatchStatus) {
     
@@ -34,6 +34,11 @@ typedef NS_ENUM(int, MatchStatus) {
 - (id)init {
     if (self = [super init]) {
         
+        teamOne = [[NSArray alloc] init];
+        teamTwo = [[NSArray alloc] init];
+        teamOneNames = [[NSArray alloc] init];
+        teamTwoNames = [[NSArray alloc] init];
+        
     }
     return self;
 }
@@ -48,14 +53,14 @@ typedef NS_ENUM(int, MatchStatus) {
 
 # pragma mark - Teams
 
-- (void)setTeamOneWithArray:(NSArray *)team
+- (void)setTeamOneWithArray:(NSArray *)team andNames:(NSArray *)names
 {
  
     teamOne = team;
     
 }
 
-- (void)setTeamTwoWithArray:(NSArray *)team
+- (void)setTeamTwoWithArray:(NSArray *)team andNames:(NSArray *)names
 {
     
     teamTwo = team;
@@ -71,7 +76,8 @@ typedef NS_ENUM(int, MatchStatus) {
     PFObject * newMatch = [PFObject objectWithClassName:@"Match"];
     
     // save array of users
-    newMatch[@"status"] = MatchStatusUnconfirmed;
+    NSNumber *status = @0;
+    newMatch[@"status"] = status;
     newMatch[@"teamOne"] = teamOne;
     newMatch[@"teamTwo"] = teamTwo;
     

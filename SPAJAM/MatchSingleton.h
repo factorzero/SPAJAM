@@ -11,16 +11,20 @@
 @interface MatchSingleton : NSObject {
     
     NSArray *teamOne;
+    NSArray *teamOneNames;
     NSArray *teamTwo;
+    NSArray *teamTwoNames;
     
 }
 
 @property (nonatomic, strong, readonly) NSArray *teamOne;
+@property (nonatomic, strong, readonly) NSArray *teamOneNames;
 @property (nonatomic, strong, readonly) NSArray *teamTwo;
+@property (nonatomic, strong, readonly) NSArray *teamTwoNames;
 
 + (id)sharedManager;
 - (void)createMatch;
-- (void)setTeamOneWithArray:(NSArray *)team;
-- (void)setTeamTwoWithArray:(NSArray *)team;
+- (void)setTeamOneWithArray:(NSArray *)team andNames:(NSArray *)names;
+- (void)setTeamTwoWithArray:(NSArray *)team andNames:(NSArray *)names;
 
 @end
