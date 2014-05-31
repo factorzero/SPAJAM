@@ -8,6 +8,7 @@
 
 #import "MatchProfileViewController.h"
 #import <Parse/Parse.h>
+#import "MatchFriendViewController.h"
 
 @interface MatchProfileViewController ()
 
@@ -29,8 +30,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    //[self loginUser];
-    [self getSportsForUser];
+    [self loginUser];
+    //[self getSportsForUser];
 }
 
 
@@ -38,7 +39,7 @@
 - (void)loginUser
 {
     // show the signup or login screen | ログイン画面を表示
-    NSArray * permissions = [NSArray arrayWithObjects:@"public_profile",@"user_friends",@"email",@"user_likes", nil];
+    NSArray * permissions = [NSArray arrayWithObjects:@"public_profile",@"user_friends",@"email",@"user_likes",@"read_friendlists", nil];
     [PFFacebookUtils logInWithPermissions:permissions block:^(PFUser *user, NSError *error) {
         if (!user) {
             NSLog(@"Uh oh. The user cancelled the Facebook login.");
@@ -66,7 +67,7 @@
             
             NSLog(@"Item: %@", jsonDict);
             
-            if (!jsonDict) {
+            if (error) {
                 NSLog(@"Error parsing JSON: %@", error);
             } else {
                 
@@ -81,6 +82,14 @@
             // See: https://developers.facebook.com/docs/ios/errors
         }
     }];
+}
+
+# pragma mark - Create Match
+
+- (IBAction)searchForMatch:(id)sender
+{
+    MatchFriendViewController * friendSearchView = [[MatchFriendViewController alloc] init];
+    [self.navigationController pushViewController:friendSearchView animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
