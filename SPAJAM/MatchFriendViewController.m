@@ -8,10 +8,12 @@
 
 #import "MatchFriendViewController.h"
 #import <Parse/Parse.h>
+#import "MatchSingleton.h"
 
 @interface MatchFriendViewController ()
 
 @property (nonatomic, strong) NSMutableArray *friendArray;
+@property (nonatomic, strong) NSMutableArray *friendIDArray;
 @end
 
 @implementation MatchFriendViewController
@@ -27,6 +29,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     //[self getFriendsForUser];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -45,7 +48,7 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -58,10 +61,14 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"friendCell";
+    static NSString *CellIdentifier = @"CellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        [cell.imageView setImage:[UIImage imageNamed:@"キャラ_ネイマール風.png"]];
+    }
     
-    // Configure the cell...
+    [cell.textLabel setText:[self.friendArray objectAtIndex:indexPath.row]];
     
     return cell;
 }
@@ -76,32 +83,29 @@
 - (void)getFriendsForUser
 {
     // get friends
-    /*[FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+    [FBRequestConnection startForMyFriendsWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         
         if (!error) {
             
-            //NSDictionary *friendDict = result;
+            NSDictionary * resultDict = [result objectForKey:@"data"];
             NSLog(@"user friends: %@", result);
-            
+            for (id object in resultDict) {
+                NSLog(@"%@", object);
+                NSLog(@"name %@", [object objectForKey:@"first_name"]);
+                NSLog(@"id %@", [object objectForKey:@"id"]);
+                
+                [self.friendArray addObject:[object objectForKey:@"last_name"]];
+                [self.friendIDArray addObject:[object objectForKey:@"id"]];
+            }
+            // reload table
+            [self.tableView reloadData];
             
         } else {
             NSLog(@"Friend Error:%@", error);
         }
         
             
-    }];*/
-    
-    FBRequest* friendsRequest = [FBRequest requestForMyFriends];
-    [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,
-                                                  NSDictionary* result,
-                                                  NSError *error) {
-        NSArray* friends = [result objectForKey:@"data"];
-        NSLog(@"Found: %i friends", friends.count);
-        for (NSDictionary<FBGraphUser>* friend in friends) {
-            NSLog(@"I have a friend named %@ with id %@", friend.name, friend.id);
-        }
     }];
-    
     
 }
 

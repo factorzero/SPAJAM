@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0423DC31193A31D800263FB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0423DC30193A31D800263FB9 /* Main.storyboard */; };
 		042D0D941939AFBD004AFEA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D931939AFBD004AFEA3 /* Foundation.framework */; };
 		042D0D961939AFBE004AFEA3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D951939AFBE004AFEA3 /* CoreGraphics.framework */; };
 		042D0D981939AFBE004AFEA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D971939AFBE004AFEA3 /* UIKit.framework */; };
@@ -33,7 +34,6 @@
 		042D0DDD1939B8AF004AFEA3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0DDC1939B8AF004AFEA3 /* FacebookSDK.framework */; };
 		042D0DE11939BC52004AFEA3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 042D0DE01939BC52004AFEA3 /* README.md */; };
 		042D0DE51939BCB0004AFEA3 /* MatchProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D0DE31939BCB0004AFEA3 /* MatchProfileViewController.m */; };
-		042D0DE61939BCB0004AFEA3 /* MatchProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042D0DE41939BCB0004AFEA3 /* MatchProfileViewController.xib */; };
 		04DCD8451939D1C800F38759 /* MatchFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD8431939D1C800F38759 /* MatchFriendViewController.m */; };
 		04DCD8461939D1C800F38759 /* MatchFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DCD8441939D1C800F38759 /* MatchFriendViewController.xib */; };
 		04DCD84A1939E5E000F38759 /* キャラ_ネイマール風.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DCD8481939E5E000F38759 /* キャラ_ネイマール風.png */; };
@@ -52,6 +52,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0423DC30193A31D800263FB9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		042D0D901939AFBD004AFEA3 /* SPAJAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPAJAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042D0D931939AFBD004AFEA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		042D0D951939AFBE004AFEA3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,7 +85,6 @@
 		042D0DE01939BC52004AFEA3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = SOURCE_ROOT; };
 		042D0DE21939BCB0004AFEA3 /* MatchProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchProfileViewController.h; sourceTree = "<group>"; };
 		042D0DE31939BCB0004AFEA3 /* MatchProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchProfileViewController.m; sourceTree = "<group>"; };
-		042D0DE41939BCB0004AFEA3 /* MatchProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchProfileViewController.xib; sourceTree = "<group>"; };
 		04DCD8421939D1C800F38759 /* MatchFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchFriendViewController.h; sourceTree = "<group>"; };
 		04DCD8431939D1C800F38759 /* MatchFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchFriendViewController.m; sourceTree = "<group>"; };
 		04DCD8441939D1C800F38759 /* MatchFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchFriendViewController.xib; sourceTree = "<group>"; };
@@ -132,6 +132,7 @@
 		042D0D871939AFBD004AFEA3 = {
 			isa = PBXGroup;
 			children = (
+				0423DC30193A31D800263FB9 /* Main.storyboard */,
 				042D0D991939AFBE004AFEA3 /* SPAJAM */,
 				042D0DB81939AFBE004AFEA3 /* SPAJAMTests */,
 				042D0D921939AFBD004AFEA3 /* Frameworks */,
@@ -181,7 +182,6 @@
 				042D0DA91939AFBE004AFEA3 /* ViewController.m */,
 				042D0DE21939BCB0004AFEA3 /* MatchProfileViewController.h */,
 				042D0DE31939BCB0004AFEA3 /* MatchProfileViewController.m */,
-				042D0DE41939BCB0004AFEA3 /* MatchProfileViewController.xib */,
 				04DCD8421939D1C800F38759 /* MatchFriendViewController.h */,
 				04DCD8431939D1C800F38759 /* MatchFriendViewController.m */,
 				04DCD8441939D1C800F38759 /* MatchFriendViewController.xib */,
@@ -315,7 +315,7 @@
 				042D0DAC1939AFBE004AFEA3 /* Images.xcassets in Resources */,
 				042D0D9E1939AFBE004AFEA3 /* InfoPlist.strings in Resources */,
 				04DCD84A1939E5E000F38759 /* キャラ_ネイマール風.png in Resources */,
-				042D0DE61939BCB0004AFEA3 /* MatchProfileViewController.xib in Resources */,
+				0423DC31193A31D800263FB9 /* Main.storyboard in Resources */,
 				042D0DE11939BC52004AFEA3 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

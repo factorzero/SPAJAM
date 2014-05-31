@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 
 @implementation MatchSingleton
+@synthesize teamOne, teamTwo;
 
 typedef NS_ENUM(int, MatchStatus) {
     
@@ -37,6 +38,31 @@ typedef NS_ENUM(int, MatchStatus) {
     return self;
 }
 
+# pragma mark - Location
+
+- (void)setLocation:(NSString *)name withCoordinate:(CGPoint)coordinate
+{
+    
+}
+
+
+# pragma mark - Teams
+
+- (void)setTeamOneWithArray:(NSArray *)team
+{
+ 
+    teamOne = team;
+    
+}
+
+- (void)setTeamTwoWithArray:(NSArray *)team
+{
+    
+    teamTwo = team;
+    
+}
+
+
 # pragma mark - Create Match
 
 - (void)createMatch
@@ -45,7 +71,6 @@ typedef NS_ENUM(int, MatchStatus) {
     PFObject * newMatch = [PFObject objectWithClassName:@"Match"];
     
     // save array of users
-    
     newMatch[@"status"] = MatchStatusUnconfirmed;
     
     // save the match

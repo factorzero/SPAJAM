@@ -8,8 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MatchSingleton : NSObject
+@interface MatchSingleton : NSObject {
+    
+    NSArray *teamOne;
+    NSArray *teamTwo;
+    
+}
 
+@property (nonatomic, strong, readonly) NSArray *teamOne;
+@property (nonatomic, strong, readonly) NSArray *teamTwo;
 
 + (id)sharedManager;
 

@@ -32,6 +32,8 @@
 	<string>1438711196383608</string>
 	<key>FacebookDisplayName</key>
 	<string>Match!</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
