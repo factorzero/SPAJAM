@@ -21,6 +21,7 @@
 		042D0DB51939AFBE004AFEA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D971939AFBE004AFEA3 /* UIKit.framework */; };
 		042D0DBD1939AFBE004AFEA3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 042D0DBB1939AFBE004AFEA3 /* InfoPlist.strings */; };
 		042D0DBF1939AFBE004AFEA3 /* SPAJAMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D0DBE1939AFBE004AFEA3 /* SPAJAMTests.m */; };
+		042D0DC91939B0D7004AFEA3 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0DC81939B0D7004AFEA3 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		042D0DBA1939AFBE004AFEA3 /* SPAJAMTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SPAJAMTests-Info.plist"; sourceTree = "<group>"; };
 		042D0DBC1939AFBE004AFEA3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		042D0DBE1939AFBE004AFEA3 /* SPAJAMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAJAMTests.m; sourceTree = "<group>"; };
+		042D0DC81939B0D7004AFEA3 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			files = (
 				042D0D961939AFBE004AFEA3 /* CoreGraphics.framework in Frameworks */,
 				042D0D981939AFBE004AFEA3 /* UIKit.framework in Frameworks */,
+				042D0DC91939B0D7004AFEA3 /* Parse.framework in Frameworks */,
 				042D0D941939AFBD004AFEA3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +104,7 @@
 		042D0D921939AFBD004AFEA3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				042D0DC81939B0D7004AFEA3 /* Parse.framework */,
 				042D0D931939AFBD004AFEA3 /* Foundation.framework */,
 				042D0D951939AFBE004AFEA3 /* CoreGraphics.framework */,
 				042D0D971939AFBE004AFEA3 /* UIKit.framework */,
@@ -376,6 +380,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SPAJAM/SPAJAM-Prefix.pch";
 				INFOPLIST_FILE = "SPAJAM/SPAJAM-Info.plist";
@@ -389,6 +397,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SPAJAM/SPAJAM-Prefix.pch";
 				INFOPLIST_FILE = "SPAJAM/SPAJAM-Info.plist";
