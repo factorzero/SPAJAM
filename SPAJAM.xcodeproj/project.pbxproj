@@ -38,6 +38,7 @@
 		04DCD8461939D1C800F38759 /* MatchFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DCD8441939D1C800F38759 /* MatchFriendViewController.xib */; };
 		04DCD84A1939E5E000F38759 /* キャラ_ネイマール風.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DCD8481939E5E000F38759 /* キャラ_ネイマール風.png */; };
 		04DCD84B1939E5E000F38759 /* キャラ_メッシ風.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DCD8491939E5E000F38759 /* キャラ_メッシ風.png */; };
+		04DCD84E193A171000F38759 /* MatchSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD84D193A171000F38759 /* MatchSingleton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,8 @@
 		04DCD8441939D1C800F38759 /* MatchFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchFriendViewController.xib; sourceTree = "<group>"; };
 		04DCD8481939E5E000F38759 /* キャラ_ネイマール風.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "キャラ_ネイマール風.png"; sourceTree = "<group>"; };
 		04DCD8491939E5E000F38759 /* キャラ_メッシ風.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "キャラ_メッシ風.png"; sourceTree = "<group>"; };
+		04DCD84C193A171000F38759 /* MatchSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchSingleton.h; sourceTree = "<group>"; };
+		04DCD84D193A171000F38759 /* MatchSingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchSingleton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 			children = (
 				042D0DA21939AFBE004AFEA3 /* AppDelegate.h */,
 				042D0DA31939AFBE004AFEA3 /* AppDelegate.m */,
+				04DCD84C193A171000F38759 /* MatchSingleton.h */,
+				04DCD84D193A171000F38759 /* MatchSingleton.m */,
 				042D0DA81939AFBE004AFEA3 /* ViewController.h */,
 				042D0DA91939AFBE004AFEA3 /* ViewController.m */,
 				042D0DE21939BCB0004AFEA3 /* MatchProfileViewController.h */,
@@ -335,6 +340,7 @@
 				042D0DA41939AFBE004AFEA3 /* AppDelegate.m in Sources */,
 				04DCD8451939D1C800F38759 /* MatchFriendViewController.m in Sources */,
 				042D0DA01939AFBE004AFEA3 /* main.m in Sources */,
+				04DCD84E193A171000F38759 /* MatchSingleton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

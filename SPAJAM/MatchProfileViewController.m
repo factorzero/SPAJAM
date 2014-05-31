@@ -30,8 +30,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self loginUser];
-    //[self getSportsForUser];
+    //[self loginUser];
+    [self getSportsForUser];
 }
 
 

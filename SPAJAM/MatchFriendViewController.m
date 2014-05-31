@@ -66,6 +66,11 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 # pragma mark - Facebook Data
 
 - (void)getFriendsForUser
