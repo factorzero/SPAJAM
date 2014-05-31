@@ -32,6 +32,7 @@
 		042D0DD91939B62E004AFEA3 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0DD81939B62E004AFEA3 /* StoreKit.framework */; };
 		042D0DDB1939B655004AFEA3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0DDA1939B655004AFEA3 /* SystemConfiguration.framework */; };
 		042D0DDD1939B8AF004AFEA3 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0DDC1939B8AF004AFEA3 /* FacebookSDK.framework */; };
+		042D0DDF1939BBB8004AFEA3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 042D0DDE1939BBB8004AFEA3 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		042D0DD81939B62E004AFEA3 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		042D0DDA1939B655004AFEA3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		042D0DDC1939B8AF004AFEA3 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		042D0DDE1939BBB8004AFEA3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 		042D0D9A1939AFBE004AFEA3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				042D0DDE1939BBB8004AFEA3 /* README.md */,
 				042D0D9B1939AFBE004AFEA3 /* SPAJAM-Info.plist */,
 				042D0D9C1939AFBE004AFEA3 /* InfoPlist.strings */,
 				042D0D9F1939AFBE004AFEA3 /* main.m */,
@@ -277,6 +280,7 @@
 			files = (
 				042D0DAC1939AFBE004AFEA3 /* Images.xcassets in Resources */,
 				042D0D9E1939AFBE004AFEA3 /* InfoPlist.strings in Resources */,
+				042D0DDF1939BBB8004AFEA3 /* README.md in Resources */,
 				042D0DA71939AFBE004AFEA3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
