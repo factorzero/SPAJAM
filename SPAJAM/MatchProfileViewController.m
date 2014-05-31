@@ -29,7 +29,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    [self loginUser];
+    //[self loginUser];
+    [self getSportsForUser];
 }
 
 
@@ -37,7 +38,7 @@
 - (void)loginUser
 {
     // show the signup or login screen | ログイン画面を表示
-    NSArray * permissions = [NSArray arrayWithObjects:@"public_profile",@"user_friends",@"email", nil];
+    NSArray * permissions = [NSArray arrayWithObjects:@"public_profile",@"user_friends",@"email",@"user_likes", nil];
     [PFFacebookUtils logInWithPermissions:permissions block:^(PFUser *user, NSError *error) {
         if (!user) {
             NSLog(@"Uh oh. The user cancelled the Facebook login.");
@@ -45,9 +46,41 @@
             NSLog(@"User signed up and logged in through Facebook!");
         } else {
             NSLog(@"User logged in through Facebook!");
+            
+            
         }
     }];
     
+}
+
+- (void)getSportsForUser
+{
+    [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        if (!error) {
+            // Success! Include your code to handle the results here
+            //NSLog(@"user info: %@", result);
+            
+            // Parse results
+            NSError * error;
+            NSDictionary *jsonDict = result;
+            
+            NSLog(@"Item: %@", jsonDict);
+            
+            if (!jsonDict) {
+                NSLog(@"Error parsing JSON: %@", error);
+            } else {
+                
+                NSString *sports = [jsonDict objectForKey:@"sports"];
+                NSLog(@"Sports: %@", sports);
+                
+            }
+            
+            
+        } else {
+            // An error occurred, we need to handle the error
+            // See: https://developers.facebook.com/docs/ios/errors
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
