@@ -72,9 +72,14 @@ typedef NS_ENUM(int, MatchStatus) {
     
     // save array of users
     newMatch[@"status"] = MatchStatusUnconfirmed;
+    newMatch[@"teamOne"] = teamOne;
+    newMatch[@"teamTwo"] = teamTwo;
+    
     
     // save the match
     [newMatch saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
+        
+        // save and ask for confirmation through push
         
     }];
 

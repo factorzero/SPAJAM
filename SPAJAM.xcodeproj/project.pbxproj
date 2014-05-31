@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0408DDAD193A382B00E16597 /* menu_bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 0408DDA7193A382B00E16597 /* menu_bottom.png */; };
+		0408DDAE193A382B00E16597 /* menu_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 0408DDA8193A382B00E16597 /* menu_logo.png */; };
+		0408DDAF193A382B00E16597 /* menu01_football.png in Resources */ = {isa = PBXBuildFile; fileRef = 0408DDA9193A382B00E16597 /* menu01_football.png */; };
+		0408DDB0193A382B00E16597 /* menu02_baseball.png in Resources */ = {isa = PBXBuildFile; fileRef = 0408DDAA193A382B00E16597 /* menu02_baseball.png */; };
+		0408DDB1193A382B00E16597 /* menu03_prowrestling.png in Resources */ = {isa = PBXBuildFile; fileRef = 0408DDAB193A382B00E16597 /* menu03_prowrestling.png */; };
+		0408DDB2193A382B00E16597 /* menu04_bowling.png in Resources */ = {isa = PBXBuildFile; fileRef = 0408DDAC193A382B00E16597 /* menu04_bowling.png */; };
+		0408DDB5193A3C6D00E16597 /* MatchRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0408DDB4193A3C6D00E16597 /* MatchRegisterViewController.m */; };
 		0423DC31193A31D800263FB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0423DC30193A31D800263FB9 /* Main.storyboard */; };
+		0423DC34193A375400263FB9 /* MatchTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423DC33193A375400263FB9 /* MatchTypeViewController.m */; };
 		042D0D941939AFBD004AFEA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D931939AFBD004AFEA3 /* Foundation.framework */; };
 		042D0D961939AFBE004AFEA3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D951939AFBE004AFEA3 /* CoreGraphics.framework */; };
 		042D0D981939AFBE004AFEA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D971939AFBE004AFEA3 /* UIKit.framework */; };
@@ -35,7 +43,6 @@
 		042D0DE11939BC52004AFEA3 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 042D0DE01939BC52004AFEA3 /* README.md */; };
 		042D0DE51939BCB0004AFEA3 /* MatchProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042D0DE31939BCB0004AFEA3 /* MatchProfileViewController.m */; };
 		04DCD8451939D1C800F38759 /* MatchFriendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD8431939D1C800F38759 /* MatchFriendViewController.m */; };
-		04DCD8461939D1C800F38759 /* MatchFriendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DCD8441939D1C800F38759 /* MatchFriendViewController.xib */; };
 		04DCD84A1939E5E000F38759 /* キャラ_ネイマール風.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DCD8481939E5E000F38759 /* キャラ_ネイマール風.png */; };
 		04DCD84B1939E5E000F38759 /* キャラ_メッシ風.png in Resources */ = {isa = PBXBuildFile; fileRef = 04DCD8491939E5E000F38759 /* キャラ_メッシ風.png */; };
 		04DCD84E193A171000F38759 /* MatchSingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 04DCD84D193A171000F38759 /* MatchSingleton.m */; };
@@ -52,7 +59,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0408DDA7193A382B00E16597 /* menu_bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_bottom.png; sourceTree = "<group>"; };
+		0408DDA8193A382B00E16597 /* menu_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_logo.png; sourceTree = "<group>"; };
+		0408DDA9193A382B00E16597 /* menu01_football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu01_football.png; sourceTree = "<group>"; };
+		0408DDAA193A382B00E16597 /* menu02_baseball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu02_baseball.png; sourceTree = "<group>"; };
+		0408DDAB193A382B00E16597 /* menu03_prowrestling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu03_prowrestling.png; sourceTree = "<group>"; };
+		0408DDAC193A382B00E16597 /* menu04_bowling.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu04_bowling.png; sourceTree = "<group>"; };
+		0408DDB3193A3C6D00E16597 /* MatchRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchRegisterViewController.h; sourceTree = "<group>"; };
+		0408DDB4193A3C6D00E16597 /* MatchRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchRegisterViewController.m; sourceTree = "<group>"; };
 		0423DC30193A31D800263FB9 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0423DC32193A375400263FB9 /* MatchTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchTypeViewController.h; sourceTree = "<group>"; };
+		0423DC33193A375400263FB9 /* MatchTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchTypeViewController.m; sourceTree = "<group>"; };
 		042D0D901939AFBD004AFEA3 /* SPAJAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPAJAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042D0D931939AFBD004AFEA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		042D0D951939AFBE004AFEA3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -87,7 +104,6 @@
 		042D0DE31939BCB0004AFEA3 /* MatchProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchProfileViewController.m; sourceTree = "<group>"; };
 		04DCD8421939D1C800F38759 /* MatchFriendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchFriendViewController.h; sourceTree = "<group>"; };
 		04DCD8431939D1C800F38759 /* MatchFriendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchFriendViewController.m; sourceTree = "<group>"; };
-		04DCD8441939D1C800F38759 /* MatchFriendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchFriendViewController.xib; sourceTree = "<group>"; };
 		04DCD8481939E5E000F38759 /* キャラ_ネイマール風.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "キャラ_ネイマール風.png"; sourceTree = "<group>"; };
 		04DCD8491939E5E000F38759 /* キャラ_メッシ風.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "キャラ_メッシ風.png"; sourceTree = "<group>"; };
 		04DCD84C193A171000F38759 /* MatchSingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchSingleton.h; sourceTree = "<group>"; };
@@ -182,9 +198,12 @@
 				042D0DA91939AFBE004AFEA3 /* ViewController.m */,
 				042D0DE21939BCB0004AFEA3 /* MatchProfileViewController.h */,
 				042D0DE31939BCB0004AFEA3 /* MatchProfileViewController.m */,
+				0423DC32193A375400263FB9 /* MatchTypeViewController.h */,
+				0423DC33193A375400263FB9 /* MatchTypeViewController.m */,
 				04DCD8421939D1C800F38759 /* MatchFriendViewController.h */,
 				04DCD8431939D1C800F38759 /* MatchFriendViewController.m */,
-				04DCD8441939D1C800F38759 /* MatchFriendViewController.xib */,
+				0408DDB3193A3C6D00E16597 /* MatchRegisterViewController.h */,
+				0408DDB4193A3C6D00E16597 /* MatchRegisterViewController.m */,
 				042D0DAB1939AFBE004AFEA3 /* Images.xcassets */,
 				04DCD8471939E5E000F38759 /* images */,
 				042D0D9A1939AFBE004AFEA3 /* Supporting Files */,
@@ -225,6 +244,12 @@
 		04DCD8471939E5E000F38759 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				0408DDA7193A382B00E16597 /* menu_bottom.png */,
+				0408DDA8193A382B00E16597 /* menu_logo.png */,
+				0408DDA9193A382B00E16597 /* menu01_football.png */,
+				0408DDAA193A382B00E16597 /* menu02_baseball.png */,
+				0408DDAB193A382B00E16597 /* menu03_prowrestling.png */,
+				0408DDAC193A382B00E16597 /* menu04_bowling.png */,
 				04DCD8481939E5E000F38759 /* キャラ_ネイマール風.png */,
 				04DCD8491939E5E000F38759 /* キャラ_メッシ風.png */,
 			);
@@ -310,13 +335,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0408DDB0193A382B00E16597 /* menu02_baseball.png in Resources */,
 				04DCD84B1939E5E000F38759 /* キャラ_メッシ風.png in Resources */,
-				04DCD8461939D1C800F38759 /* MatchFriendViewController.xib in Resources */,
 				042D0DAC1939AFBE004AFEA3 /* Images.xcassets in Resources */,
 				042D0D9E1939AFBE004AFEA3 /* InfoPlist.strings in Resources */,
+				0408DDAD193A382B00E16597 /* menu_bottom.png in Resources */,
+				0408DDAF193A382B00E16597 /* menu01_football.png in Resources */,
 				04DCD84A1939E5E000F38759 /* キャラ_ネイマール風.png in Resources */,
+				0408DDAE193A382B00E16597 /* menu_logo.png in Resources */,
 				0423DC31193A31D800263FB9 /* Main.storyboard in Resources */,
+				0408DDB1193A382B00E16597 /* menu03_prowrestling.png in Resources */,
 				042D0DE11939BC52004AFEA3 /* README.md in Resources */,
+				0408DDB2193A382B00E16597 /* menu04_bowling.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +366,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				042D0DE51939BCB0004AFEA3 /* MatchProfileViewController.m in Sources */,
+				0408DDB5193A3C6D00E16597 /* MatchRegisterViewController.m in Sources */,
+				0423DC34193A375400263FB9 /* MatchTypeViewController.m in Sources */,
 				042D0DAA1939AFBE004AFEA3 /* ViewController.m in Sources */,
 				042D0DA41939AFBE004AFEA3 /* AppDelegate.m in Sources */,
 				04DCD8451939D1C800F38759 /* MatchFriendViewController.m in Sources */,

@@ -29,11 +29,16 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    //[self.navigationController setNavigationBarHidden:YES];
     
-    //[self loginUser];
-    [self getSportsForUser];
+    
+    //[self getSportsForUser];
 }
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    [self loginUser];
+}
 
 # pragma mark - Facebook
 - (void)loginUser

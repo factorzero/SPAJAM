@@ -19,5 +19,8 @@
 @property (nonatomic, strong, readonly) NSArray *teamTwo;
 
 + (id)sharedManager;
+- (void)createMatch;
+- (void)setTeamOneWithArray:(NSArray *)team;
+- (void)setTeamTwoWithArray:(NSArray *)team;
 
 @end

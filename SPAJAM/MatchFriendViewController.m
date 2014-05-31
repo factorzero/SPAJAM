@@ -9,6 +9,7 @@
 #import "MatchFriendViewController.h"
 #import <Parse/Parse.h>
 #import "MatchSingleton.h"
+#import "MatchRegisterViewController.h"
 
 @interface MatchFriendViewController ()
 
@@ -23,18 +24,19 @@
     [super viewDidLoad];
     
     self.friendArray = [[NSMutableArray alloc] init];
+    self.friendIDArray = [[NSMutableArray alloc] init];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    //[self getFriendsForUser];
+    [self getFriendsForUser];
 
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self getFriendsForUser];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -75,6 +77,41 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // get ids for Facebook users
+    PFQuery *userQuery = [PFUser query];
+    NSLog(@"friend %@", [self.friendIDArray objectAtIndex:indexPath.row]);
+    NSString * selected = [self.friendIDArray objectAtIndex:indexPath.row];
+    [userQuery whereKey:@"facebookID" equalTo:selected];
+    [userQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        
+        if (!error) {
+            // The find succeeded.
+            NSLog(@"Successfully retrieved %d scores.", objects.count);
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                NSLog(@"%@", object.objectId);
+            }
+            
+            // set self and opponents for match
+            MatchSingleton *sharedManager = [MatchSingleton sharedManager];
+             NSArray *teamOne = [NSArray arrayWithObjects:[PFUser currentUser], nil];
+             NSArray *teamTwo = objects;
+             
+             [sharedManager setTeamOneWithArray:teamOne];
+             [sharedManager setTeamTwoWithArray:teamTwo];
+             
+             MatchRegisterViewController * matchRegister = [[MatchRegisterViewController alloc] init];
+             [self.navigationController pushViewController:matchRegister animated:YES];
+            
+            
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+        
+    }];
+    
+    
     
 }
 
@@ -106,6 +143,9 @@
         
             
     }];
+    
+    
+    
     
 }
 
