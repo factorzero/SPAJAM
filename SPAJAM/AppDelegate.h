@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class MatchProfileViewController;
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) MatchProfileViewController *profileViewController;
 
 @end

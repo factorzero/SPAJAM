@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import "MatchProfileViewController.h"
 
 @implementation AppDelegate
 
@@ -20,6 +21,12 @@
     
     [PFFacebookUtils initializeFacebook];
     
+    self.profileViewController = [[MatchProfileViewController alloc] initWithNibName:@"MatchProfileViewController" bundle:nil];
+    UINavigationController * navController = [[UINavigationController alloc] initWithRootViewController:self.profileViewController];
+    
+    // set nav to root controller
+    self.window.rootViewController = navController;
+    [self.window makeKeyAndVisible];
     return YES;
 }
 
