@@ -31,6 +31,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     //[self.navigationController setNavigationBarHidden:YES];
+    [self.navigationController.navigationBar setTintColor:[UIColor colorWithRed:32/255.0 green:201/255.0 blue:155/255.0 alpha:1.0]];
     
     [self loginUser];
     

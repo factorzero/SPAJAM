@@ -25,6 +25,21 @@
 		042B1E0A193AC28E00B63EAE /* UIView+shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B1E07193AC28E00B63EAE /* UIView+shake.m */; };
 		042B1E0C193AC50A00B63EAE /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E0B193AC50A00B63EAE /* profile.png */; };
 		042B1E0E193AC83C00B63EAE /* avatar01_football_re.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E0D193AC83C00B63EAE /* avatar01_football_re.png */; };
+		042B1E1F193AD3F200B63EAE /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E10193AD3F200B63EAE /* app_icon.png */; };
+		042B1E20193AD3F200B63EAE /* app_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E11193AD3F200B63EAE /* app_icon@2x.png */; };
+		042B1E21193AD3F200B63EAE /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E12193AD3F200B63EAE /* Icon-120.png */; };
+		042B1E22193AD3F200B63EAE /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E13193AD3F200B63EAE /* Icon-72.png */; };
+		042B1E23193AD3F200B63EAE /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E14193AD3F200B63EAE /* Icon-72@2x.png */; };
+		042B1E24193AD3F200B63EAE /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E15193AD3F200B63EAE /* Icon-76.png */; };
+		042B1E25193AD3F200B63EAE /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E16193AD3F200B63EAE /* Icon-76@2x.png */; };
+		042B1E26193AD3F200B63EAE /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E17193AD3F200B63EAE /* Icon-iPad-Spotlight-iOS7@2x.png */; };
+		042B1E27193AD3F200B63EAE /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E18193AD3F200B63EAE /* Icon-Small-50.png */; };
+		042B1E28193AD3F200B63EAE /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E19193AD3F200B63EAE /* Icon-Small.png */; };
+		042B1E29193AD3F200B63EAE /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E1A193AD3F200B63EAE /* Icon-Small@2x.png */; };
+		042B1E2A193AD3F200B63EAE /* Icon-Spotlight-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E1B193AD3F200B63EAE /* Icon-Spotlight-iOS7.png */; };
+		042B1E2B193AD3F200B63EAE /* Icon-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E1C193AD3F200B63EAE /* Icon-Spotlight-iOS7@2x.png */; };
+		042B1E2C193AD3F200B63EAE /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E1D193AD3F200B63EAE /* Icon.png */; };
+		042B1E2D193AD3F200B63EAE /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E1E193AD3F200B63EAE /* Icon@2x.png */; };
 		042D0D941939AFBD004AFEA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D931939AFBD004AFEA3 /* Foundation.framework */; };
 		042D0D961939AFBE004AFEA3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D951939AFBE004AFEA3 /* CoreGraphics.framework */; };
 		042D0D981939AFBE004AFEA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D971939AFBE004AFEA3 /* UIKit.framework */; };
@@ -94,6 +109,21 @@
 		042B1E07193AC28E00B63EAE /* UIView+shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+shake.m"; sourceTree = "<group>"; };
 		042B1E0B193AC50A00B63EAE /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		042B1E0D193AC83C00B63EAE /* avatar01_football_re.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar01_football_re.png; sourceTree = "<group>"; };
+		042B1E10193AD3F200B63EAE /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
+		042B1E11193AD3F200B63EAE /* app_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "app_icon@2x.png"; sourceTree = "<group>"; };
+		042B1E12193AD3F200B63EAE /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		042B1E13193AD3F200B63EAE /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		042B1E14193AD3F200B63EAE /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		042B1E15193AD3F200B63EAE /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		042B1E16193AD3F200B63EAE /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		042B1E17193AD3F200B63EAE /* Icon-iPad-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
+		042B1E18193AD3F200B63EAE /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		042B1E19193AD3F200B63EAE /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		042B1E1A193AD3F200B63EAE /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		042B1E1B193AD3F200B63EAE /* Icon-Spotlight-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-iOS7.png"; sourceTree = "<group>"; };
+		042B1E1C193AD3F200B63EAE /* Icon-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
+		042B1E1D193AD3F200B63EAE /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		042B1E1E193AD3F200B63EAE /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		042D0D901939AFBD004AFEA3 /* SPAJAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPAJAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042D0D931939AFBD004AFEA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		042D0D951939AFBE004AFEA3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -202,6 +232,28 @@
 			path = "UIView+shake";
 			sourceTree = "<group>";
 		};
+		042B1E0F193AD3F200B63EAE /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				042B1E10193AD3F200B63EAE /* app_icon.png */,
+				042B1E11193AD3F200B63EAE /* app_icon@2x.png */,
+				042B1E12193AD3F200B63EAE /* Icon-120.png */,
+				042B1E13193AD3F200B63EAE /* Icon-72.png */,
+				042B1E14193AD3F200B63EAE /* Icon-72@2x.png */,
+				042B1E15193AD3F200B63EAE /* Icon-76.png */,
+				042B1E16193AD3F200B63EAE /* Icon-76@2x.png */,
+				042B1E17193AD3F200B63EAE /* Icon-iPad-Spotlight-iOS7@2x.png */,
+				042B1E18193AD3F200B63EAE /* Icon-Small-50.png */,
+				042B1E19193AD3F200B63EAE /* Icon-Small.png */,
+				042B1E1A193AD3F200B63EAE /* Icon-Small@2x.png */,
+				042B1E1B193AD3F200B63EAE /* Icon-Spotlight-iOS7.png */,
+				042B1E1C193AD3F200B63EAE /* Icon-Spotlight-iOS7@2x.png */,
+				042B1E1D193AD3F200B63EAE /* Icon.png */,
+				042B1E1E193AD3F200B63EAE /* Icon@2x.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
 		042D0D871939AFBD004AFEA3 = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +316,7 @@
 				04E1039D193A7BAB008C5490 /* MatchConfirmViewController.h */,
 				04E1039E193A7BAB008C5490 /* MatchConfirmViewController.m */,
 				042D0DAB1939AFBE004AFEA3 /* Images.xcassets */,
+				042B1E0F193AD3F200B63EAE /* icons */,
 				042B1E00193AC28E00B63EAE /* UIImageView+effects */,
 				042B1E05193AC28E00B63EAE /* UIView+shake */,
 				042B1DF5193AAD8400B63EAE /* SVProgressHUD */,
@@ -401,22 +454,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				042B1E20193AD3F200B63EAE /* app_icon@2x.png in Resources */,
 				0408DDB0193A382B00E16597 /* menu02_baseball.png in Resources */,
 				04DCD84B1939E5E000F38759 /* キャラ_メッシ風.png in Resources */,
 				042D0DAC1939AFBE004AFEA3 /* Images.xcassets in Resources */,
+				042B1E24193AD3F200B63EAE /* Icon-76.png in Resources */,
 				042D0D9E1939AFBE004AFEA3 /* InfoPlist.strings in Resources */,
+				042B1E22193AD3F200B63EAE /* Icon-72.png in Resources */,
 				0408DDAD193A382B00E16597 /* menu_bottom.png in Resources */,
 				042B1DFD193AB38000B63EAE /* vs_header.png in Resources */,
+				042B1E1F193AD3F200B63EAE /* app_icon.png in Resources */,
+				042B1E21193AD3F200B63EAE /* Icon-120.png in Resources */,
+				042B1E23193AD3F200B63EAE /* Icon-72@2x.png in Resources */,
 				0408DDAF193A382B00E16597 /* menu01_football.png in Resources */,
+				042B1E2A193AD3F200B63EAE /* Icon-Spotlight-iOS7.png in Resources */,
+				042B1E2C193AD3F200B63EAE /* Icon.png in Resources */,
+				042B1E29193AD3F200B63EAE /* Icon-Small@2x.png in Resources */,
+				042B1E26193AD3F200B63EAE /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
+				042B1E2D193AD3F200B63EAE /* Icon@2x.png in Resources */,
 				04DCD84A1939E5E000F38759 /* キャラ_ネイマール風.png in Resources */,
 				0408DDAE193A382B00E16597 /* menu_logo.png in Resources */,
 				042B1DFA193AAD8400B63EAE /* SVProgressHUD.bundle in Resources */,
+				042B1E28193AD3F200B63EAE /* Icon-Small.png in Resources */,
+				042B1E2B193AD3F200B63EAE /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				0423DC31193A31D800263FB9 /* Main.storyboard in Resources */,
 				042B1DFF193AB3C600B63EAE /* vs_member.png in Resources */,
 				0408DDB1193A382B00E16597 /* menu03_prowrestling.png in Resources */,
 				042D0DE11939BC52004AFEA3 /* README.md in Resources */,
+				042B1E27193AD3F200B63EAE /* Icon-Small-50.png in Resources */,
 				0408DDB2193A382B00E16597 /* menu04_bowling.png in Resources */,
 				042B1E0E193AC83C00B63EAE /* avatar01_football_re.png in Resources */,
+				042B1E25193AD3F200B63EAE /* Icon-76@2x.png in Resources */,
 				042B1E0C193AC50A00B63EAE /* profile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -81,6 +81,14 @@
                     // The find succeeded.
                     NSLog(@"Successfully retrieved the object.");
                     
+                    MatchSingleton *sharedManager = [MatchSingleton sharedManager];
+                    sharedManager.matchForConfirmation = object;
+                    
+                    NSArray * teamOneNames = object[@"teamOneNames"];
+                    NSArray * teamTwoNames = object[@"teamTwoNames"];
+                    // show names
+                    [self.captainOneName setText:[teamOneNames objectAtIndex:0]];
+                    [self.captainTwoName setText:[teamTwoNames objectAtIndex:0]];
                     
                     [SVProgressHUD showSuccessWithStatus:@"Start!"];
                     
