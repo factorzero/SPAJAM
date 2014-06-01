@@ -36,12 +36,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     liveMode = NO;
+    points1 = 0;
+    points2 = 0;
     [self loadMatchData];
     [self.winButton setHidden:YES];
     [self.loseButton setHidden:YES];
     [self.confirmButton setHidden:NO];
     [self.teamOnePoint setText:[NSString stringWithFormat:@"%d", points1]];
-    [self.teamOnePoint setText:[NSString stringWithFormat:@"%d", points2]];
+    [self.teamTwoPoint setText:[NSString stringWithFormat:@"%d", points2]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,7 +84,12 @@
                     NSNumber * status = object[@"status"];
                     
                     if ([status intValue] == 1) {
+                        liveMode = YES;
+                        self.matchObject = object;
+                        // confirmed. go live
                         [self showResultButtons];
+                        
+                        
                     }
                 }
                 
@@ -108,6 +115,9 @@
             NSNumber * status = object[@"status"];
             
             if ([status intValue] == 1) {
+                liveMode = YES;
+                self.matchObject = object;
+                // confirmed. go live
                 [self showResultButtons];
             }
         }
@@ -130,19 +140,57 @@
     [self.winButton setHidden:NO];
     [self.loseButton setHidden:NO];
     [self.confirmButton setHidden:YES];
+    
+    self.matchTimer = [NSTimer scheduledTimerWithTimeInterval: 5.0
+                                                  target: self
+                                                selector:@selector(checkMatchObject)
+                                                userInfo: nil repeats:YES];
 }
 
 
 - (IBAction)winButton:(id)sender
 {
-    
+    [self.matchObject incrementKey:@"points1"];
+    [self.matchObject saveInBackground];
 }
 
 - (IBAction)loseButton:(id)sender
 {
+    [self.matchObject incrementKey:@"points2"];
+    [self.matchObject saveInBackground];
+}
+
+- (void)checkMatchObject
+{
+    [self.matchObject refresh];
+    int one = [self.matchObject[@"points1"]intValue];
+    int two = [self.matchObject[@"points2"] intValue];
+    [self updatePoints1:one Points2:two];
+}
+
+- (void)updatePoints1:(int)one Points2:(int)two
+{
+    
+    if (points1 < one) {
+        // team one scored
+        // animation
+        
+        // save
+        points1 = one;
+    } else if (points2 < two)
+    {
+        // team two scored
+        // save
+        points2 = two;
+    }
     
 }
 
+- (void) viewDidDisappear:(BOOL)animated
+{
+    [self.matchTimer invalidate];
+    self.matchTimer = nil;
+}
 /*
 #pragma mark - Navigation
 

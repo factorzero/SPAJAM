@@ -21,4 +21,5 @@
 @property (nonatomic, weak) IBOutlet UIButton *loseButton;
 @property (nonatomic, weak) IBOutlet UIButton *confirmButton;
 @property (nonatomic, strong) PFObject *matchObject;
+@property (nonatomic, strong) NSTimer *matchTimer;
 @end

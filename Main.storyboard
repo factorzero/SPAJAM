@@ -142,6 +142,20 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RX8-yb-qPG">
+                                <rect key="frame" x="78" y="64" width="42" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="0.12782888370000001" green="0.81253264739999997" blue="0.94674744899999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oni-af-MVL">
+                                <rect key="frame" x="211" y="64" width="42" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <color key="textColor" red="0.12782888370000001" green="0.81253264739999997" blue="0.94674744899999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -153,6 +167,8 @@
                         <outlet property="captainTwoName" destination="yh1-bh-83Y" id="rxW-23-d5W"/>
                         <outlet property="confirmButton" destination="KbB-UM-pyy" id="u3S-n4-jhz"/>
                         <outlet property="loseButton" destination="NIr-D3-5PA" id="X8x-7g-zVD"/>
+                        <outlet property="teamOnePoint" destination="RX8-yb-qPG" id="nqg-Ha-gg9"/>
+                        <outlet property="teamTwoPoint" destination="oni-af-MVL" id="mKS-nu-Q7U"/>
                         <outlet property="winButton" destination="iim-94-1lp" id="goF-uz-fhR"/>
                     </connections>
                 </viewController>

@@ -94,7 +94,10 @@ typedef NS_ENUM(int, MatchStatus) {
     newMatch[@"teamOneNames"] = teamOneNames;
     newMatch[@"teamTwo"] = teamTwo;
     newMatch[@"teamTwoNames"] = teamTwoNames;
-    
+    NSNumber *points1 = @0;
+    newMatch[@"points1"] = points1;
+    NSNumber *points2 = @0;
+    newMatch[@"points2"] = points2;
     
     // save the match
     [newMatch saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
