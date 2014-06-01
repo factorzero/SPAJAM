@@ -10,6 +10,9 @@
 #import <Parse/Parse.h>
 #import "MatchSingleton.h"
 #import "SVProgressHUD.h"
+#import "UIImage+fill.h"
+#import "UIImageView+effects.h"
+#import "UIView+shake.h"
 
 @interface MatchConfirmViewController () {
     
@@ -143,7 +146,7 @@
     
     if (liveMode == YES) {
         NSLog(@"live mode started");
-        self.matchTimer = [NSTimer scheduledTimerWithTimeInterval: 5.0
+        self.matchTimer = [NSTimer scheduledTimerWithTimeInterval: 2.0
                                                            target: self
                                                          selector:@selector(checkMatchObject)
                                                          userInfo: nil repeats:YES];
@@ -194,6 +197,27 @@
         
         [self.teamOnePoint setText:[NSString stringWithFormat:@"%d", points1]];
         [self.teamTwoPoint setText:[NSString stringWithFormat:@"%d", points2]];
+        [self.captainTwoImage shakeWithCount:10 interval:0.03];
+        [self.captainTwoImage whiteFadeInWithDuration:0.3
+                                             delay:0.0
+                                             block:^(void) {
+                                                 
+                                                // label animation
+                                                 [UIView animateWithDuration:0.3f delay:0.1f options:UIViewAnimationOptionCurveEaseInOut animations:^(void)
+                                                  {
+                                                      [self.teamOnePoint setTransform:CGAffineTransformMakeScale(2.0, 2.0)];
+                                                      
+                                                  } completion:^(BOOL complete){
+                                                      
+                                                      [UIView animateWithDuration:0.1f delay:0.1f options:UIViewAnimationOptionCurveEaseInOut animations:^(void)
+                                                       {
+                                                           [self.teamOnePoint setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
+                                                           
+                                                       } completion:nil];
+                                                      
+                                                  }];
+                                                 
+                                             }];
         
     } else if (points2 < two)
     {
@@ -203,6 +227,27 @@
         
         [self.teamOnePoint setText:[NSString stringWithFormat:@"%d", points1]];
         [self.teamTwoPoint setText:[NSString stringWithFormat:@"%d", points2]];
+        [self.captainOneImage shakeWithCount:10 interval:0.03];
+        [self.captainOneImage whiteFadeInWithDuration:0.3
+                                                delay:0.0
+                                                block:^(void) {
+                                                    
+                                                    // label animation
+                                                    [UIView animateWithDuration:0.3f delay:0.1f options:UIViewAnimationOptionCurveEaseInOut animations:^(void)
+                                                     {
+                                                         [self.teamTwoPoint setTransform:CGAffineTransformMakeScale(2.0, 2.0)];
+                                                         
+                                                     } completion:^(BOOL complete){
+                                                         
+                                                         [UIView animateWithDuration:0.1f delay:0.1f options:UIViewAnimationOptionCurveEaseInOut animations:^(void)
+                                                          {
+                                                              [self.teamTwoPoint setTransform:CGAffineTransformMakeScale(1.0, 1.0)];
+                                                              
+                                                          } completion:nil];
+                                                         
+                                                     }];
+                                                    
+                                                }];
     }
     
 }

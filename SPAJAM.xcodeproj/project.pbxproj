@@ -20,6 +20,10 @@
 		042B1DFB193AAD8400B63EAE /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B1DF9193AAD8400B63EAE /* SVProgressHUD.m */; };
 		042B1DFD193AB38000B63EAE /* vs_header.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1DFC193AB38000B63EAE /* vs_header.png */; };
 		042B1DFF193AB3C600B63EAE /* vs_member.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1DFE193AB3C600B63EAE /* vs_member.png */; };
+		042B1E08193AC28E00B63EAE /* UIImage+fill.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B1E02193AC28E00B63EAE /* UIImage+fill.m */; };
+		042B1E09193AC28E00B63EAE /* UIImageView+effects.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B1E04193AC28E00B63EAE /* UIImageView+effects.m */; };
+		042B1E0A193AC28E00B63EAE /* UIView+shake.m in Sources */ = {isa = PBXBuildFile; fileRef = 042B1E07193AC28E00B63EAE /* UIView+shake.m */; };
+		042B1E0C193AC50A00B63EAE /* profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 042B1E0B193AC50A00B63EAE /* profile.png */; };
 		042D0D941939AFBD004AFEA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D931939AFBD004AFEA3 /* Foundation.framework */; };
 		042D0D961939AFBE004AFEA3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D951939AFBE004AFEA3 /* CoreGraphics.framework */; };
 		042D0D981939AFBE004AFEA3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 042D0D971939AFBE004AFEA3 /* UIKit.framework */; };
@@ -81,6 +85,13 @@
 		042B1DF9193AAD8400B63EAE /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		042B1DFC193AB38000B63EAE /* vs_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vs_header.png; sourceTree = "<group>"; };
 		042B1DFE193AB3C600B63EAE /* vs_member.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vs_member.png; sourceTree = "<group>"; };
+		042B1E01193AC28E00B63EAE /* UIImage+fill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+fill.h"; sourceTree = "<group>"; };
+		042B1E02193AC28E00B63EAE /* UIImage+fill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+fill.m"; sourceTree = "<group>"; };
+		042B1E03193AC28E00B63EAE /* UIImageView+effects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+effects.h"; sourceTree = "<group>"; };
+		042B1E04193AC28E00B63EAE /* UIImageView+effects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+effects.m"; sourceTree = "<group>"; };
+		042B1E06193AC28E00B63EAE /* UIView+shake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+shake.h"; sourceTree = "<group>"; };
+		042B1E07193AC28E00B63EAE /* UIView+shake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+shake.m"; sourceTree = "<group>"; };
+		042B1E0B193AC50A00B63EAE /* profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profile.png; sourceTree = "<group>"; };
 		042D0D901939AFBD004AFEA3 /* SPAJAM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SPAJAM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042D0D931939AFBD004AFEA3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		042D0D951939AFBE004AFEA3 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -169,6 +180,26 @@
 			path = SVProgressHUD;
 			sourceTree = "<group>";
 		};
+		042B1E00193AC28E00B63EAE /* UIImageView+effects */ = {
+			isa = PBXGroup;
+			children = (
+				042B1E01193AC28E00B63EAE /* UIImage+fill.h */,
+				042B1E02193AC28E00B63EAE /* UIImage+fill.m */,
+				042B1E03193AC28E00B63EAE /* UIImageView+effects.h */,
+				042B1E04193AC28E00B63EAE /* UIImageView+effects.m */,
+			);
+			path = "UIImageView+effects";
+			sourceTree = "<group>";
+		};
+		042B1E05193AC28E00B63EAE /* UIView+shake */ = {
+			isa = PBXGroup;
+			children = (
+				042B1E06193AC28E00B63EAE /* UIView+shake.h */,
+				042B1E07193AC28E00B63EAE /* UIView+shake.m */,
+			);
+			path = "UIView+shake";
+			sourceTree = "<group>";
+		};
 		042D0D871939AFBD004AFEA3 = {
 			isa = PBXGroup;
 			children = (
@@ -231,6 +262,8 @@
 				04E1039D193A7BAB008C5490 /* MatchConfirmViewController.h */,
 				04E1039E193A7BAB008C5490 /* MatchConfirmViewController.m */,
 				042D0DAB1939AFBE004AFEA3 /* Images.xcassets */,
+				042B1E00193AC28E00B63EAE /* UIImageView+effects */,
+				042B1E05193AC28E00B63EAE /* UIView+shake */,
 				042B1DF5193AAD8400B63EAE /* SVProgressHUD */,
 				04DCD8471939E5E000F38759 /* images */,
 				042D0D9A1939AFBE004AFEA3 /* Supporting Files */,
@@ -271,6 +304,7 @@
 		04DCD8471939E5E000F38759 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				042B1E0B193AC50A00B63EAE /* profile.png */,
 				042B1DFE193AB3C600B63EAE /* vs_member.png */,
 				042B1DFC193AB38000B63EAE /* vs_header.png */,
 				0408DDA7193A382B00E16597 /* menu_bottom.png */,
@@ -379,6 +413,7 @@
 				0408DDB1193A382B00E16597 /* menu03_prowrestling.png in Resources */,
 				042D0DE11939BC52004AFEA3 /* README.md in Resources */,
 				0408DDB2193A382B00E16597 /* menu04_bowling.png in Resources */,
+				042B1E0C193AC50A00B63EAE /* profile.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,11 +433,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				042D0DE51939BCB0004AFEA3 /* MatchProfileViewController.m in Sources */,
+				042B1E08193AC28E00B63EAE /* UIImage+fill.m in Sources */,
+				042B1E0A193AC28E00B63EAE /* UIView+shake.m in Sources */,
 				0408DDB5193A3C6D00E16597 /* MatchRegisterViewController.m in Sources */,
 				0423DC34193A375400263FB9 /* MatchTypeViewController.m in Sources */,
 				04E1039F193A7BAB008C5490 /* MatchConfirmViewController.m in Sources */,
 				042D0DAA1939AFBE004AFEA3 /* ViewController.m in Sources */,
 				042D0DA41939AFBE004AFEA3 /* AppDelegate.m in Sources */,
+				042B1E09193AC28E00B63EAE /* UIImageView+effects.m in Sources */,
 				04DCD8451939D1C800F38759 /* MatchFriendViewController.m in Sources */,
 				042B1DFB193AAD8400B63EAE /* SVProgressHUD.m in Sources */,
 				042D0DA01939AFBE004AFEA3 /* main.m in Sources */,
