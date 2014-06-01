@@ -183,6 +183,23 @@
     int one = [self.matchObject[@"points1"]intValue];
     int two = [self.matchObject[@"points2"] intValue];
     [self updatePoints1:one Points2:two];
+    
+    if (one >= 5 || two >= 5) {
+        
+        liveMode = NO;
+        [self.matchTimer invalidate];
+        self.matchTimer = nil;
+        
+        NSString * finalMessage = [NSString stringWithFormat:@"%@ = %d : %@ = %d", self.captainOneName.text, one, self.captainTwoName.text, two];
+        UIAlertView * alert =[[UIAlertView alloc ] initWithTitle:@"決勝"
+                                                         message:finalMessage
+                                                        delegate:self
+                                               cancelButtonTitle:@"OK"
+                                               otherButtonTitles: nil];
+        //[alert addButtonWithTitle:@"GOO"];
+        [alert show];
+        
+    }
 }
 
 - (void)updatePoints1:(int)one Points2:(int)two
@@ -254,6 +271,7 @@
 
 - (void) viewDidDisappear:(BOOL)animated
 {
+    liveMode = NO;
     [self.matchTimer invalidate];
     self.matchTimer = nil;
 }

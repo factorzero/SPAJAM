@@ -82,7 +82,7 @@
                                 <rect key="frame" x="0.0" y="64" width="320" height="166"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="キャラ_ネイマール風.png" translatesAutoresizingMaskIntoConstraints="NO" id="peI-SM-gVX">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="avatar01_football_re.png" translatesAutoresizingMaskIntoConstraints="NO" id="peI-SM-gVX">
                                 <rect key="frame" x="0.0" y="91" width="120" height="200"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -331,6 +331,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avatar01_football_re.png" width="600" height="1200"/>
         <image name="menu01_football.png" width="640" height="181"/>
         <image name="menu02_baseball.png" width="640" height="181"/>
         <image name="menu03_prowrestling.png" width="640" height="181"/>
