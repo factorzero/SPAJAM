@@ -141,28 +141,42 @@
     [self.loseButton setHidden:NO];
     [self.confirmButton setHidden:YES];
     
-    self.matchTimer = [NSTimer scheduledTimerWithTimeInterval: 5.0
-                                                  target: self
-                                                selector:@selector(checkMatchObject)
-                                                userInfo: nil repeats:YES];
+    if (liveMode == YES) {
+        NSLog(@"live mode started");
+        self.matchTimer = [NSTimer scheduledTimerWithTimeInterval: 5.0
+                                                           target: self
+                                                         selector:@selector(checkMatchObject)
+                                                         userInfo: nil repeats:YES];
+    }
+    
 }
 
 
 - (IBAction)winButton:(id)sender
 {
+    self.winButton.enabled = NO;
     [self.matchObject incrementKey:@"points1"];
-    [self.matchObject saveInBackground];
+    [self.matchObject saveInBackgroundWithBlock:^(BOOL success, NSError * error) {
+        
+        self.winButton.enabled = YES;
+        
+    }];
 }
 
 - (IBAction)loseButton:(id)sender
 {
+    self.loseButton.enabled = NO;
     [self.matchObject incrementKey:@"points2"];
-    [self.matchObject saveInBackground];
+    [self.matchObject saveInBackgroundWithBlock:^(BOOL success, NSError * error) {
+        
+        self.loseButton.enabled = YES;
+        
+    }];
 }
 
 - (void)checkMatchObject
 {
-    [self.matchObject refresh];
+    //[self.matchObject refresh];
     int one = [self.matchObject[@"points1"]intValue];
     int two = [self.matchObject[@"points2"] intValue];
     [self updatePoints1:one Points2:two];
@@ -177,11 +191,18 @@
         
         // save
         points1 = one;
+        
+        [self.teamOnePoint setText:[NSString stringWithFormat:@"%d", points1]];
+        [self.teamTwoPoint setText:[NSString stringWithFormat:@"%d", points2]];
+        
     } else if (points2 < two)
     {
         // team two scored
         // save
         points2 = two;
+        
+        [self.teamOnePoint setText:[NSString stringWithFormat:@"%d", points1]];
+        [self.teamTwoPoint setText:[NSString stringWithFormat:@"%d", points2]];
     }
     
 }
