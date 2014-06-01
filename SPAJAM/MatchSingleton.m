@@ -8,6 +8,7 @@
 
 #import "MatchSingleton.h"
 #import <Parse/Parse.h>
+#import "SVProgressHUD.h"
 
 @implementation MatchSingleton
 @synthesize teamOne, teamTwo, teamOneNames, teamTwoNames, matchForConfirmation;
@@ -83,6 +84,7 @@ typedef NS_ENUM(int, MatchStatus) {
 - (void)createMatch
 {
     
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     PFObject * newMatch = [PFObject objectWithClassName:@"Match"];
     
     // save array of users
@@ -97,8 +99,12 @@ typedef NS_ENUM(int, MatchStatus) {
     // save the match
     [newMatch saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error){
         
-        // save and ask for confirmation through push
+        // pop to root
+        [SVProgressHUD showSuccessWithStatus:@""];
         
+        [[NSNotificationCenter defaultCenter]
+         postNotificationName:@"match created"
+         object:self];
     }];
 
     
@@ -106,6 +112,7 @@ typedef NS_ENUM(int, MatchStatus) {
 
 - (void)confirmMatch
 {
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     NSNumber *status = @1; // confirmed
     matchForConfirmation[@"status"] = status;
     // save the match
@@ -113,6 +120,7 @@ typedef NS_ENUM(int, MatchStatus) {
         
         // save and ask for confirmation through push
         NSLog(@"confirmed the match!");
+        [SVProgressHUD showSuccessWithStatus:@""];
     }];
 }
 

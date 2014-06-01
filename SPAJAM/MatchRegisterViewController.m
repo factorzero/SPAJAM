@@ -34,6 +34,11 @@
                                                  name:@"data ready"
                                                object:nil];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(popToRootController)
+                                                 name:@"match created"
+                                               object:nil];
+    
 }
 
 - (void)updateUI
@@ -43,6 +48,7 @@
     [self.captainOneName setText:[sharedManager.teamOneNames objectAtIndex:0]];
     [self.captainTwoName setText:[sharedManager.teamTwoNames objectAtIndex:0]];
 }
+
 
 - (void)didReceiveMemoryWarning
 {
@@ -62,7 +68,10 @@
     
 }
 
-
+- (void)popToRootController
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
 
 /*
 #pragma mark - Navigation

@@ -9,6 +9,7 @@
 #import "MatchConfirmViewController.h"
 #import <Parse/Parse.h>
 #import "MatchSingleton.h"
+#import "SVProgressHUD.h"
 
 @interface MatchConfirmViewController ()
 
@@ -42,13 +43,15 @@
 
 - (void)loadMatchData
 {
+    [SVProgressHUD showWithMaskType:SVProgressHUDMaskTypeGradient];
     // search for match
     PFQuery * query = [PFQuery queryWithClassName:@"Match"];
-    [query whereKey:@"teamOne" equalTo:[PFUser currentUser]];
+    [query whereKey:@"teamTwo" equalTo:[PFUser currentUser]];
     [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
         
         if (!object) {
             NSLog(@"The getFirstObject request failed.");
+            [SVProgressHUD showErrorWithStatus:@"no match!"];
         } else {
             // The find succeeded.
             NSLog(@"Successfully retrieved the object.");
@@ -61,8 +64,16 @@
             // show names
             [self.captainOneName setText:[teamOneNames objectAtIndex:0]];
             [self.captainTwoName setText:[teamTwoNames objectAtIndex:0]];
+         
+            [SVProgressHUD showSuccessWithStatus:@""];
             
+            NSNumber * status = object[@"status"];
+            
+            if ([status intValue] == 1) {
+                
+            }
         }
+        
         
     }];
     
@@ -73,6 +84,22 @@
     MatchSingleton *sharedManager = [MatchSingleton sharedManager];
     [sharedManager confirmMatch];
     
+    
+}
+
+- (void)showResultButtons
+{
+    
+}
+
+
+- (IBAction)winButton:(id)sender
+{
+    
+}
+
+- (IBAction)loseButton:(id)sender
+{
     
 }
 

@@ -15,5 +15,8 @@
 @property (nonatomic, weak) IBOutlet UIImageView *captainTwoImage;
 @property (nonatomic, weak) IBOutlet UILabel *captainOneName;
 @property (nonatomic, weak) IBOutlet UILabel *captainTwoName;
+@property (nonatomic, weak) IBOutlet UIButton *winButton;
+@property (nonatomic, weak) IBOutlet UIButton *loseButton;
+@property (nonatomic, weak) IBOutlet UIButton *confirmButton;
 @property (nonatomic, strong) PFObject *matchObject;
 @end
