@@ -11,7 +11,12 @@
 #import "MatchSingleton.h"
 #import "SVProgressHUD.h"
 
-@interface MatchConfirmViewController ()
+@interface MatchConfirmViewController () {
+    
+    BOOL liveMode;
+    int points1;
+    int points2;
+}
 
 @end
 
@@ -30,7 +35,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    liveMode = NO;
     [self loadMatchData];
+    [self.winButton setHidden:YES];
+    [self.loseButton setHidden:YES];
+    [self.confirmButton setHidden:NO];
+    [self.teamOnePoint setText:[NSString stringWithFormat:@"%d", points1]];
+    [self.teamOnePoint setText:[NSString stringWithFormat:@"%d", points2]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,7 +62,34 @@
         
         if (!object) {
             NSLog(@"The getFirstObject request failed.");
-            [SVProgressHUD showErrorWithStatus:@"no match!"];
+            
+            // check for confirmed match
+            PFQuery * query = [PFQuery queryWithClassName:@"Match"];
+            [query whereKey:@"teamOne" equalTo:[PFUser currentUser]];
+            
+            [query getFirstObjectInBackgroundWithBlock:^(PFObject *object, NSError *error) {
+                
+                if (!object) {
+                    NSLog(@"The getFirstObject request failed.");
+                    [SVProgressHUD showErrorWithStatus:@"no match!"];
+                } else {
+                    // The find succeeded.
+                    NSLog(@"Successfully retrieved the object.");
+                    
+                    
+                    [SVProgressHUD showSuccessWithStatus:@"Start!"];
+                    
+                    NSNumber * status = object[@"status"];
+                    
+                    if ([status intValue] == 1) {
+                        [self showResultButtons];
+                    }
+                }
+                
+                
+            }];
+
+            
         } else {
             // The find succeeded.
             NSLog(@"Successfully retrieved the object.");
@@ -70,7 +108,7 @@
             NSNumber * status = object[@"status"];
             
             if ([status intValue] == 1) {
-                
+                [self showResultButtons];
             }
         }
         
@@ -89,7 +127,9 @@
 
 - (void)showResultButtons
 {
-    
+    [self.winButton setHidden:NO];
+    [self.loseButton setHidden:NO];
+    [self.confirmButton setHidden:YES];
 }
 
 

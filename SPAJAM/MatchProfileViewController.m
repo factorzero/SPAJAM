@@ -10,7 +10,8 @@
 #import <Parse/Parse.h>
 #import "MatchFriendViewController.h"
 
-@interface MatchProfileViewController ()
+@interface MatchProfileViewController () 
+
 
 @end
 
@@ -31,12 +32,13 @@
     // Do any additional setup after loading the view from its nib.
     //[self.navigationController setNavigationBarHidden:YES];
     
+    [self loginUser];
     
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [self loginUser];
+    
 }
 
 # pragma mark - Facebook
